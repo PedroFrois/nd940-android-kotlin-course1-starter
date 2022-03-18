@@ -5,10 +5,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.udacity.shoestore.databinding.FragmentLoginBinding
-
 
 class LoginFragment : Fragment() {
 
@@ -29,12 +27,12 @@ class LoginFragment : Fragment() {
         binding.viewModel = viewModel
         binding.lifecycleOwner = this
 
-        viewModel.eventNavigateWelcome.observe(viewLifecycleOwner, Observer { newEvent ->
+        viewModel.eventNavigateWelcome.observe(viewLifecycleOwner) { newEvent ->
             if (newEvent) {
                 // TODO:  findNavController().navigate()
                 viewModel.onEventNavigateToWelcomeFinish()
             }
-        })
+        }
 
         return binding.root
     }

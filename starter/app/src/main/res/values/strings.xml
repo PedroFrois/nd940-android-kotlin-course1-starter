@@ -1,12 +1,13 @@
 <resources>
     <string name="app_name">ShoeStore</string>
-    <!-- Strings related to login -->
+    <!-- login -->
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password</string>
     <string name="action_sign_in">Sign in</string>
     <string name="action_sign_up">Register Account</string>
-    <string name="welcome">"Welcome!"</string>
-    <string name="invalid_username">Not a valid username</string>
-    <string name="invalid_password">Password must be >5 characters</string>
-    <string name="login_failed">"Login failed"</string>
+
+    <!-- welcome   -->
+    <string name="welcome_title">"Welcome!"</string>
+    <string name="welcome_description">This is our shoe store app! Fell free to explore it and send us your feedback</string>
+    <string name="welcome_button">Enter app</string>
 </resources>
