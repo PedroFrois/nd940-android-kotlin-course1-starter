@@ -15,4 +15,7 @@
     <string name="instruction_title">"This is the instructions screen!"</string>
     <string name="instruction_description">You can use the buttons on your phone to go back to the login or click on this button to see our shoe listing</string>
     <string name="instruction_button">Shoe list</string>
+
+    <!-- shoe list    -->
+    <string name="detail_button_description">Shoe detail</string>
 </resources>
