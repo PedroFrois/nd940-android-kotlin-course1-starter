@@ -17,7 +17,8 @@ class WelcomeFragment : Fragment() {
     private val viewModel get() = _viewModel!!
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+        inflater: LayoutInflater,
+        container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentWelcomeBinding.inflate(layoutInflater, container, false)

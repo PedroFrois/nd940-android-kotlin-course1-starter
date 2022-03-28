@@ -10,4 +10,9 @@
     <string name="welcome_title">"Welcome!"</string>
     <string name="welcome_description">This is our shoe store app! Fell free to explore it and send us your feedback</string>
     <string name="welcome_button">Enter app</string>
+
+    <!-- instruction -->
+    <string name="instruction_title">"This is the instructions screen!"</string>
+    <string name="instruction_description">You can use the buttons on your phone to go back to the login or click on this button to see our shoe listing</string>
+    <string name="instruction_button">Shoe list</string>
 </resources>
