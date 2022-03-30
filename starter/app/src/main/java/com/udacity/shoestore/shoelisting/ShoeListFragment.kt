@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import com.udacity.shoestore.databinding.FragmentShoeListBinding
 
 class ShoeListFragment : Fragment() {
@@ -29,7 +30,9 @@ class ShoeListFragment : Fragment() {
 
         viewModel.eventNavigateToDetail.observe(viewLifecycleOwner) { newEvent ->
             if (newEvent) {
-                // TODO: navigate
+                findNavController().navigate(
+                    ShoeListFragmentDirections.actionShoeListFragmentToShoeDetailFragment()
+                )
                 viewModel.onEventNavigateToDetailFinish()
             }
         }
