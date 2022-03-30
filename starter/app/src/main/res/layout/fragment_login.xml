@@ -14,10 +14,10 @@
         android:id="@+id/container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:paddingLeft="@dimen/fragment_horizontal_margin"
-        android:paddingTop="@dimen/fragment_vertical_margin"
-        android:paddingRight="@dimen/fragment_horizontal_margin"
-        android:paddingBottom="@dimen/fragment_vertical_margin"
+        android:paddingLeft="@dimen/medium"
+        android:paddingTop="@dimen/medium"
+        android:paddingRight="@dimen/medium"
+        android:paddingBottom="@dimen/medium"
         tools:context=".login.LoginFragment">
 
         <EditText
@@ -76,7 +76,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="start"
             android:layout_marginStart="48dp"
-            android:layout_marginTop="@dimen/fragment_vertical_margin_small"
+            android:layout_marginTop="@dimen/small"
             android:layout_marginEnd="48dp"
             android:layout_marginBottom="64dp"
             android:onClick="@{() -> viewModel.onSignUpClick()}"

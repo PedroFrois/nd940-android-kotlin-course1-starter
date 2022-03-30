@@ -16,6 +16,18 @@
     <string name="instruction_description">You can use the buttons on your phone to go back to the login or click on this button to see our shoe listing</string>
     <string name="instruction_button">Shoe list</string>
 
-    <!-- shoe list    -->
-    <string name="detail_button_description">Shoe detail</string>
+    <!-- shoe list -->
+    <string name="shoe_list_detail_button">Shoe detail</string>
+
+    <!-- shoe detail -->
+    <string name="shoe_detail_name_label">Shoe Name</string>
+    <string name="shoe_detail_name_hint">Shoe</string>
+    <string name="shoe_detail_company_label">Company</string>
+    <string name="shoe_detail_company_hint">Democrata</string>
+    <string name="shoe_detail_size_label">Shoe Size</string>
+    <string name="shoe_detail_size_hint">10</string>
+    <string name="shoe_detail_description_label">Description</string>
+    <string name="shoe_detail_description_hint">Very comfortable shoe</string>
+    <string name="shoe_detail_cancel_button">Cancel</string>
+    <string name="shoe_detail_save_button">Save</string>
 </resources>
