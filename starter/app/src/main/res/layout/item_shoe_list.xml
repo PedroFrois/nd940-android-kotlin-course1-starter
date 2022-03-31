@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/labelName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/shoe_detail_name_label"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Shoe name:" />
+
+        <TextView
+            android:id="@+id/fieldName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/small"
+            app:layout_constraintBaseline_toBaselineOf="@+id/labelName"
+            app:layout_constraintStart_toEndOf="@id/labelName"
+            tools:text="Name" />
+
+        <TextView
+            android:id="@+id/labelCompany"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/small"
+            android:text="@string/shoe_detail_company_label"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/labelName"
+            tools:text="Shoe company:" />
+
+        <TextView
+            android:id="@+id/fieldCompany"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/small"
+            app:layout_constraintBaseline_toBaselineOf="@+id/labelCompany"
+            app:layout_constraintStart_toEndOf="@id/labelCompany"
+            tools:text="Company" />
+
+        <TextView
+            android:id="@+id/labelSize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/small"
+            android:text="@string/shoe_detail_size_label"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/labelCompany"
+            tools:text="Shoe size:" />
+
+        <TextView
+            android:id="@+id/fieldSize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/small"
+            app:layout_constraintBaseline_toBaselineOf="@+id/labelSize"
+            app:layout_constraintStart_toEndOf="@id/labelSize"
+            tools:text="10" />
+
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/small"
+            app:dividerColor="@color/colorPrimaryDark"
+            app:layout_constraintTop_toBottomOf="@id/labelSize" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
