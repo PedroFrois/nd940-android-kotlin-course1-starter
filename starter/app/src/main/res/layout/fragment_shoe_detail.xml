@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginHorizontal="@dimen/medium"
         android:layout_marginVertical="@dimen/toolbar_height"
-        android:orientation="vertical"
         tools:context=".ShoeDetailFragment">
 
         <TextView
@@ -15,7 +15,9 @@
             style="@style/NameStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/shoe_detail_name_label" />
+            android:text="@string/shoe_detail_name_label"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
             android:id="@+id/shoeNameEdit"
@@ -25,14 +27,18 @@
             android:autofillHints="name"
             android:hint="@string/shoe_detail_name_hint"
             android:inputType="textCapCharacters"
-            android:textSize="@dimen/medium_text" />
+            android:textSize="@dimen/medium_text"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/shoeNameLabel" />
 
         <TextView
             android:id="@+id/companyLabel"
             style="@style/NameStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/shoe_detail_company_label" />
+            android:text="@string/shoe_detail_company_label"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/shoeNameEdit" />
 
         <EditText
             android:id="@+id/companyEdit"
@@ -42,14 +48,18 @@
             android:autofillHints="name"
             android:hint="@string/shoe_detail_company_hint"
             android:inputType="textCapCharacters"
-            android:textSize="@dimen/medium_text" />
+            android:textSize="@dimen/medium_text"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/companyLabel" />
 
         <TextView
             android:id="@+id/shoeSizeLabel"
             style="@style/NameStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/shoe_detail_size_label" />
+            android:text="@string/shoe_detail_size_label"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/companyEdit" />
 
         <EditText
             android:id="@+id/shoeSizeEdit"
@@ -59,14 +69,18 @@
             android:autofillHints="name"
             android:hint="@string/shoe_detail_size_hint"
             android:inputType="number"
-            android:textSize="@dimen/medium_text" />
+            android:textSize="@dimen/medium_text"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/shoeSizeLabel" />
 
         <TextView
             android:id="@+id/descriptionLabel"
             style="@style/NameStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/shoe_detail_description_label" />
+            android:text="@string/shoe_detail_description_label"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/shoeSizeEdit" />
 
         <EditText
             android:id="@+id/descriptionEdit"
@@ -76,30 +90,32 @@
             android:autofillHints="name"
             android:hint="@string/shoe_detail_description_hint"
             android:inputType="textMultiLine"
-            android:textSize="@dimen/medium_text" />
+            android:textSize="@dimen/medium_text"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/descriptionLabel" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
+        <Button
+            android:id="@+id/cancel_button"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/medium"
-            android:gravity="center"
-            android:orientation="horizontal">
+            android:text="@string/shoe_detail_cancel_button"
+            app:layout_constraintEnd_toStartOf="@id/save_button"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/descriptionEdit"
+            tools:ignore="ButtonStyle" />
 
-            <Button
-                android:id="@+id/cancel_button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/shoe_detail_cancel_button"
-                tools:ignore="ButtonStyle" />
+        <Button
+            android:id="@+id/save_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/medium"
+            android:text="@string/shoe_detail_save_button"
+            app:layout_constraintBaseline_toBaselineOf="@id/cancel_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/cancel_button"
+            tools:ignore="ButtonStyle" />
 
-            <Button
-                android:id="@+id/save_button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/medium"
-                android:text="@string/shoe_detail_save_button"
-                tools:ignore="ButtonStyle" />
-        </LinearLayout>
-
-    </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
