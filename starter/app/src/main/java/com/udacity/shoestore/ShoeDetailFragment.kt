@@ -8,7 +8,6 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import com.udacity.shoestore.databinding.FragmentShoeDetailBinding
-import com.udacity.shoestore.models.Shoe
 import com.udacity.shoestore.models.ShoesViewModel
 
 class ShoeDetailFragment : Fragment() {
@@ -23,23 +22,16 @@ class ShoeDetailFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentShoeDetailBinding.inflate(inflater, container, false)
+        binding.lifecycleOwner = this
+        binding.viewModel = viewModel
         binding.cancelButton.setOnClickListener {
             findNavController().navigateUp()
         }
         binding.saveButton.setOnClickListener {
-            viewModel.addNewShoe(getShoeFromForm())
+            viewModel.addNewShoe()
             findNavController().navigateUp()
         }
         return binding.root
-    }
-
-    private fun getShoeFromForm(): Shoe {
-        return Shoe(
-            name = binding.shoeNameEdit.text.toString(),
-            size = binding.shoeSizeEdit.text.toString().toDoubleOrNull() ?: 0.0,
-            company = binding.companyEdit.text.toString(),
-            description = binding.descriptionEdit.text.toString()
-        )
     }
 
     override fun onDestroy() {

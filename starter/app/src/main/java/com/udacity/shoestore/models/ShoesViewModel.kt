@@ -8,7 +8,19 @@ class ShoesViewModel : ViewModel() {
     private val _shoes = MutableLiveData<List<Shoe>>()
     val shoes: LiveData<List<Shoe>> get() = _shoes
 
-    fun addNewShoe(shoe: Shoe) {
-        _shoes.value = shoes.value?.plus(shoe) ?: listOf(shoe)
+    val name = MutableLiveData<String>()
+    val size = MutableLiveData<String>()
+    val company = MutableLiveData<String>()
+    val description = MutableLiveData<String>()
+
+    fun addNewShoe() {
+        Shoe(
+            name = name.value ?: "",
+            size = size.value?.toDoubleOrNull() ?: 0.0,
+            company = company.value ?: "",
+            description = description.value ?: "",
+        ).let { shoe ->
+            _shoes.value = shoes.value?.plus(shoe) ?: listOf(shoe)
+        }
     }
 }
