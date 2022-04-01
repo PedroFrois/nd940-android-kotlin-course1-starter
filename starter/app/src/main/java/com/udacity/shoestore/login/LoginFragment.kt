@@ -5,7 +5,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.udacity.shoestore.databinding.FragmentLoginBinding
 
@@ -14,27 +13,18 @@ class LoginFragment : Fragment() {
     private var _binding: FragmentLoginBinding? = null
     private val binding get() = _binding!!
 
-    private var _viewModel: LoginViewModel? = null
-    private val viewModel get() = _viewModel!!
-
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentLoginBinding.inflate(inflater, container, false)
-        _viewModel = ViewModelProvider(this).get(modelClass = LoginViewModel::class.java)
-
-        binding.viewModel = viewModel
-        binding.lifecycleOwner = this
-
-        viewModel.eventNavigateWelcome.observe(viewLifecycleOwner) { newEvent ->
-            if (newEvent) {
-                findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToWelcomeFragment())
-                viewModel.onEventNavigateToWelcomeFinish()
-            }
+        binding.signIn.setOnClickListener {
+            findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToWelcomeFragment())
         }
-
+        binding.signUp.setOnClickListener {
+            findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToWelcomeFragment())
+        }
         return binding.root
     }
 
