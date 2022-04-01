@@ -6,7 +6,7 @@
 
         <variable
             name="viewModel"
-            type="com.udacity.shoestore.ShoeListViewModel" />
+            type="com.udacity.shoestore.models.ShoesViewModel" />
     </data>
 
     <ScrollView

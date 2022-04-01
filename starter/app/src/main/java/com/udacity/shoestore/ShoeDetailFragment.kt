@@ -9,12 +9,13 @@ import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import com.udacity.shoestore.databinding.FragmentShoeDetailBinding
 import com.udacity.shoestore.models.Shoe
+import com.udacity.shoestore.models.ShoesViewModel
 
 class ShoeDetailFragment : Fragment() {
     private var _binding: FragmentShoeDetailBinding? = null
     private val binding: FragmentShoeDetailBinding get() = _binding!!
 
-    private val viewModel: ShoeListViewModel by activityViewModels()
+    private val viewModel: ShoesViewModel by activityViewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater,

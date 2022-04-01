@@ -10,14 +10,15 @@ import androidx.navigation.fragment.findNavController
 import com.udacity.shoestore.databinding.FragmentShoeListBinding
 import com.udacity.shoestore.databinding.ItemShoeListBinding
 import com.udacity.shoestore.models.Shoe
+import com.udacity.shoestore.models.ShoesViewModel
 
 class ShoeListFragment : Fragment() {
 
     private var _binding: FragmentShoeListBinding? = null
     private val binding: FragmentShoeListBinding get() = _binding!!
 
-    private var _viewModel: ShoeListViewModel? = null
-    private val viewModel: ShoeListViewModel get() = _viewModel!!
+    private var _viewModel: ShoesViewModel? = null
+    private val viewModel: ShoesViewModel get() = _viewModel!!
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -25,7 +26,7 @@ class ShoeListFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         _binding = FragmentShoeListBinding.inflate(inflater, container, false)
-        _viewModel = ViewModelProvider(requireActivity()).get(ShoeListViewModel::class.java)
+        _viewModel = ViewModelProvider(requireActivity()).get(ShoesViewModel::class.java)
 
         binding.lifecycleOwner = this
         binding.viewModel = viewModel
