@@ -70,7 +70,7 @@
 
         <com.google.android.material.divider.MaterialDivider
             android:layout_width="match_parent"
-            android:layout_height="1dp"
+            android:layout_height="@dimen/divider_height"
             android:layout_marginTop="@dimen/small"
             app:dividerColor="@color/colorPrimaryDark"
             app:layout_constraintTop_toBottomOf="@id/labelSize" />

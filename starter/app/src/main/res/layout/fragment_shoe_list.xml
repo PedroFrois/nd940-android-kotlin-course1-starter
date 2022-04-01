@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginHorizontal="@dimen/medium"
-        android:layout_marginTop="@dimen/toolbar_height"
+        android:layout_marginTop="@dimen/extra_large"
         tools:context=".ShoeListFragment">
 
         <!--LinearLayout as per the instructions and simplifies adding another view as a child-->
