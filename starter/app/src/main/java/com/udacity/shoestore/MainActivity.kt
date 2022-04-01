@@ -6,7 +6,7 @@ import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.NavController
-import androidx.navigation.findNavController
+import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.NavigationUI
 import com.udacity.shoestore.databinding.ActivityMainBinding
 import timber.log.Timber
@@ -20,8 +20,11 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         val binding =
             DataBindingUtil.setContentView<ActivityMainBinding>(this, R.layout.activity_main)
+
+        (supportFragmentManager.findFragmentById(R.id.myNavHostFragment) as NavHostFragment).let {
+            _navController = it.navController
+        }
         setSupportActionBar(binding.toolbar)
-        _navController = findNavController(R.id.myNavHostFragment)
         NavigationUI.setupActionBarWithNavController(
             this,
             navController
