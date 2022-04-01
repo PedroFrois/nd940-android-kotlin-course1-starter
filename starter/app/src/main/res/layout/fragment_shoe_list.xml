@@ -6,7 +6,7 @@
 
         <variable
             name="viewModel"
-            type="com.udacity.shoestore.shoelisting.ShoeListViewModel" />
+            type="com.udacity.shoestore.ShoeListViewModel" />
     </data>
 
     <ScrollView
@@ -14,7 +14,7 @@
         android:layout_height="match_parent"
         android:layout_marginTop="@dimen/toolbar_height"
         android:layout_marginHorizontal="@dimen/medium"
-        tools:context=".shoelisting.ShoeListFragment">
+        tools:context=".ShoeListFragment">
 
         <LinearLayout
             android:id="@+id/shoesListLinearLayout"
@@ -28,7 +28,6 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="end|bottom"
                 android:layout_margin="@dimen/medium"
-                android:onClick="@{() -> viewModel.onButtonClick()}"
                 android:contentDescription="@string/shoe_list_detail_button"
                 android:src="@drawable/ic_add" />
         </LinearLayout>

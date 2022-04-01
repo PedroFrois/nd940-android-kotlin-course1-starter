@@ -1,4 +1,4 @@
-package com.udacity.shoestore.shoelisting
+package com.udacity.shoestore
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -29,14 +29,10 @@ class ShoeListFragment : Fragment() {
 
         binding.lifecycleOwner = this
         binding.viewModel = viewModel
-
-        viewModel.eventNavigateToDetail.observe(viewLifecycleOwner) { newEvent ->
-            if (newEvent) {
-                findNavController().navigate(
-                    ShoeListFragmentDirections.actionShoeListFragmentToShoeDetailFragment()
-                )
-                viewModel.onEventNavigateToDetailFinish()
-            }
+        binding.detailFab.setOnClickListener {
+            findNavController().navigate(
+                ShoeListFragmentDirections.actionShoeListFragmentToShoeDetailFragment()
+            )
         }
 
         viewModel.shoes.observe(viewLifecycleOwner) { newListOfShoes ->

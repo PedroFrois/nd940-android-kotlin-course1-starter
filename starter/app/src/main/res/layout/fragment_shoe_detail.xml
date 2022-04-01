@@ -2,20 +2,13 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <data>
-
-        <variable
-            name="viewModel"
-            type="com.udacity.shoestore.shoedetail.ShoeDetailViewModel" />
-    </data>
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginHorizontal="@dimen/medium"
         android:layout_marginVertical="@dimen/toolbar_height"
         android:orientation="vertical"
-        tools:context=".shoedetail.ShoeDetailFragment">
+        tools:context=".ShoeDetailFragment">
 
         <TextView
             android:id="@+id/shoeNameLabel"
@@ -96,7 +89,6 @@
                 android:id="@+id/cancel_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:onClick="@{()->viewModel.onCancelButtonClick()}"
                 android:text="@string/shoe_detail_cancel_button"
                 tools:ignore="ButtonStyle" />
 
@@ -105,7 +97,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/medium"
-                android:onClick="@{()->viewModel.onSaveButtonClick()}"
                 android:text="@string/shoe_detail_save_button"
                 tools:ignore="ButtonStyle" />
         </LinearLayout>
