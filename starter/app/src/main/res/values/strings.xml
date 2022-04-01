@@ -30,4 +30,7 @@
     <string name="shoe_detail_description_hint">Very comfortable shoe</string>
     <string name="shoe_detail_cancel_button">Cancel</string>
     <string name="shoe_detail_save_button">Save</string>
+
+    <!-- menu -->
+    <string name="logout">Logout</string>
 </resources>
