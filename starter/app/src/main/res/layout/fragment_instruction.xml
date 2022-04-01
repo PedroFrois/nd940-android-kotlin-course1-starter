@@ -3,12 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <!--Even though it is a simple layout resulting in linearLayout being less computational heavy I
+            wanted to use the spread chains property of ConstraintLayout-->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginHorizontal="@dimen/medium"
         tools:context=".WelcomeFragment">
-
 
         <TextView
             android:id="@+id/title_text"
@@ -17,7 +18,6 @@
             android:text="@string/instruction_title"
             app:layout_constraintBottom_toTopOf="@+id/welcome_description"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_chainStyle="spread" />
@@ -29,7 +29,6 @@
             android:text="@string/instruction_button"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/welcome_description" />
 
@@ -42,7 +41,6 @@
             android:text="@string/instruction_description"
             app:layout_constraintBottom_toTopOf="@+id/welcome_button"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/title_text" />
 

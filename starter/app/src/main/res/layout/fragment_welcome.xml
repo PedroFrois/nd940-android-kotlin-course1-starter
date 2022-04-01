@@ -3,12 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <!--Even though it is a simple layout resulting in linearLayout being less computational heavy I
+        wanted to use the spread chains property of ConstraintLayout-->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginHorizontal="@dimen/medium"
         tools:context=".WelcomeFragment">
-
 
         <TextView
             android:id="@+id/title_text"
